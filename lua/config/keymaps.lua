@@ -8,4 +8,4 @@ vim.keymap.set("n", "<C-p>", '"0p')
 vim.keymap.set("n", "<C-P>", '"0P')
 vim.cmd("map 0 ^")
 vim.keymap.set("t", "<esc>", [[<C-\><C-n>]]) -- Exit from insert mode by Esc in Terminal
-vim.keymap.set("n", "<Leader>h", ":noh<cr>")
+vim.keymap.set("n", "<Leader>h", ":noh<cr>", { silent = true })
