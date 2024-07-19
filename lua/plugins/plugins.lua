@@ -1,4 +1,5 @@
 return {
+  { "ibhagwan/smartyank.nvim" },
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
