@@ -49,3 +49,7 @@ require("lazy").setup({
     },
   },
 })
+require("CopilotChat").setup({
+  model = "claude-3.5-sonnet",
+  -- Other options
+})
