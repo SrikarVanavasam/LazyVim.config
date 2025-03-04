@@ -59,7 +59,10 @@ require("lazy").setup({
     },
   },
 })
+
+-- Other configs
 require("CopilotChat").setup({
   model = "claude-3.7-sonnet-thought",
   -- Other options
 })
+require("lspconfig").svls.setup({})
