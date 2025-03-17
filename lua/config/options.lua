@@ -15,6 +15,16 @@ if vim.fn.has("wsl") == 1 then
     cache_enabled = 0,
   }
 end
+
+vim.o.clipboard = "unnamedplus"
+
+local function paste()
+  return {
+    vim.fn.split(vim.fn.getreg(""), "\n"),
+    vim.fn.getregtype(""),
+  }
+end
+
 vim.g.clipboard = {
   name = "OSC 52",
   copy = {
@@ -22,8 +32,7 @@ vim.g.clipboard = {
     ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
   },
   paste = {
-    ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
-    ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+    ["+"] = paste,
+    ["*"] = paste,
   },
 }
--- vim.opt.clipboard = "unnamedplus"
