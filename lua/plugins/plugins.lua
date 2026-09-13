@@ -45,4 +45,13 @@ return {
       end,
     },
   },
+  {
+    "EdgesFTW/overleaf.nvim",
+    config = function()
+      require("overleaf").setup({
+        cookie = vim.env.OVERLEAF_COOKIE,
+      })
+    end,
+    build = "cd node && npm install",
+  },
 }
